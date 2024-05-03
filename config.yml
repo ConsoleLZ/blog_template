@@ -1,0 +1,87 @@
+# 博客标题
+title: "博客标题"
+# 首页头像地址
+avatar: "https://bu.dusays.com/2023/12/24/6587c7764111a.webp"
+
+# 社交账号：如果是qq或者微信等，需要给别人一个加你的途径，比如扫描二维码进行添加,codeUrl处填写二维码，srcUrl填写链接地址
+social:
+    # 标题
+  - name: "qq"
+    # 图标地址
+    icon: "/images/qq.svg"
+    # 二维码图片
+    codeUrl: ""
+  - name: "微信"
+    icon: "/images/wechat.svg"
+    codeUrl: ""
+  - name: "github"
+    icon: "/images/github.svg"
+    srcUrl: "https://github.com/asdgjsad"
+
+# 导航栏，这里的to里面的路由名字，应该与pages下面的文件名字保持一致
+pages:
+  - name: "文章"
+    to: '/pages/article'
+  - name: "标签"
+    to: '/pages/tags'
+  - name: "友链"
+    to: '/pages/link'
+  - name: "留言"
+    to: '/pages/message'
+  - name: "关于"
+    to: '/pages/about'
+
+# 友情链接
+link:
+  - name: "vitepress"
+    url: "https://vitepress.dev/"
+    imgSrc: "https://vitepress.dev/vitepress-logo-mini.png"
+  - name: "vue"
+    url: "https://cn.vuejs.org/"
+    imgSrc: "https://cn.vuejs.org/logo.svg"
+  - name: "lazychild"
+    url: "https://www.lazychild.fun/"
+    imgSrc: "https://img2.woyaogexing.com/2024/05/02/5436aa7a7561ca10!400x400.png"
+
+# 网站时间线，会在关于页面进行显示
+timeLine:
+  - title: "开始搭建hexo博客"
+    time: "2023-3"
+    description: "发现有一些已经开源的主题模板，用的是butterfly的主题，不错，好看"
+  - title: "部署到了Gitee上面"
+    time: "2023-4"
+    description: "哈哈哈哈，终于拥有属于自己的博客网站了"
+  - title: "拥有自己的网站域名"
+    time: "2023-6"
+    description: "看别人都有自己的网站域名，很想自己部署一个自己的域名，但是好像Gitee只能使用自带的，于是部署到了vercel上面，还免了备案，嘻嘻"
+  - title: "优化网站"
+    time: "2023-12"
+    description: "现在网站面临着一个资源过多（图片有点多），访问过慢，所以打算打造一个极简分格的博客，于是使用了stellar主题，删去了文章的封面图片,以及其他的一些优化"
+  - title: "自己搭建博客模板"
+    time: "2024-4"
+    description: "虽然现在的网站访问时间确实快了不少，但是一个好的程序员怎么能不搭建出属于自己的博客呢，vitepress非常好"
+
+# 个人介绍，以一个标题加内容的形式在关于页面进行展示
+about:
+  - title: "个人爱好"
+    content: "唱，跳，rap，篮球"
+  - title: "技术栈"
+    content: "html,css,js"
+
+# 底部外链接
+extLinks:
+  - leftText: "框架"
+    rightText: "vitepress"
+    bgColor: "7bed9f"
+    href: "https://vitepress.dev/"
+  - leftText: "存储"
+    rightText: "github"
+    bgColor: "e84393"
+    href: "https://github.com/"
+  - leftText: "留言"
+    rightText: "valine"
+    bgColor: "54a0ff"
+    href: "https://valine.js.org/"
+
+# 底部文字
+footerText: "本站使用mg搭建"

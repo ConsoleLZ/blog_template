@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.VPNav{
+  display: none;
+}
+.VPDoc{
+  width: 84vw !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  position: relative;
+  left: 10vw;
+}
+.VPContent{
+  padding: 0 !important;
+}
+.VPDoc:not(.has-sidebar) .container{
+  display: block !important;
+  max-width: none !important;
+}
+.VPDoc:not(.has-sidebar) .content{
+  max-width: none !important;
+}
+.aside{
+  display: none !important;
+}
+.content-container{
+  margin: 0 !important;
+}
+.content{
+  padding: 0 !important;
+}
+.VPLocalNav{
+  top: 0 !important;
+}
+.items{
+  left: 0 !important;
+}
+.Layout{
+  min-height: 40vh !important;
+}
+::-webkit-scrollbar{
+  width:8px;
+  background-color:#F5F5F5;
+}
+/*定义滚动条轨道
+ 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow:inset 0 0 10px rgba(0,0,0,0.1);
+  border-radius:10px;
+  background-color:#F5F5F5;
+}
+/*定义滑块
+ 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+  border-radius:10px;
+  background-color: #777575;
+}
