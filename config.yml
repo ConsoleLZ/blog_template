@@ -10,10 +10,10 @@ social:
     # 图标地址
     icon: "/images/qq.svg"
     # 二维码图片
-    codeUrl: ""
+    codeUrl: "/images/qqFriend.jpg"
   - name: "微信"
     icon: "/images/wechat.svg"
-    codeUrl: ""
+    codeUrl: "/images/weixinFriend.jpg"
   - name: "github"
     icon: "/images/github.svg"
     srcUrl: "https://github.com/asdgjsad"
@@ -67,6 +67,14 @@ about:
     content: "唱，跳，rap，篮球"
   - title: "技术栈"
     content: "html,css,js"
+
+# 关于留言功能：目前只支持Valine, 需要到https://www.leancloud.cn/创建一个账号，创建完后，直接去控制台创建一个应用，去设置里面找到应用凭证即可
+Valine:
+  appId: ""
+  appKey: ""
+  placeholder: ""
+  avatar: ""
+  pageSize:
 
 # 底部外链接
 extLinks:

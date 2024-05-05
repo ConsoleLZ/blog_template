@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {onMounted} from "vue";
+import {onMounted, ref, onUpdated} from "vue";
 import {useConfig} from "./hooks/useConfig";
 import {useData, useRouter} from "vitepress";
 import Header from './components/Header.vue'
@@ -9,6 +9,9 @@ const { Layout } = DefaultTheme
 
 const {frontmatter} = useData()
 const router = useRouter()
+
+// 控制遮罩层是否显示
+let isMask = ref(false)
 
 onMounted(()=>{
   if(frontmatter.value.home){
@@ -20,15 +23,36 @@ onMounted(()=>{
     sub_title.style.cssText = `animation: typewriter ${Math.ceil(sub_title.innerText.length/4)}s steps(${sub_title.innerText.length+30}) infinite;`
   }
 })
+
+// 打开遮罩层
+function friendClick(codeUrl, srcUrl){
+  if(codeUrl){
+    const mask_item =<HTMLDivElement> document.querySelector('.mask_item')
+    mask_item.style.backgroundImage = `url(${codeUrl})`
+    isMask.value = true
+  }
+  if(srcUrl){
+    window.open(srcUrl)
+  }
+}
+// 关闭遮罩层
+function closeMaskClick(){
+  isMask.value = false
+}
 </script>
 
 <template>
   <Header v-if="!frontmatter.home"></Header>
   <div class="home" v-if="frontmatter.home">
+    <!--遮罩层-->
+    <div class="mask" v-show="isMask" @click="closeMaskClick()">
+      <p style="font-size: 12px;margin-bottom: 5px">点击任意处关闭</p>
+      <div class="mask_item"></div>
+    </div>
     <p class="title">{{useConfig().title}}</p>
     <div class="avatar" :style=" 'background-image: url(' + useConfig().avatar + ')' "></div>
     <div class="icon">
-      <div v-for="item in useConfig().social" :key="item.name">
+      <div v-for="item in useConfig().social" :key="item.name" @click="friendClick(item.codeUrl, item.srcUrl)">
         <img :src="item.icon" :alt="item.name" :title="item.name">
       </div>
     </div>
@@ -50,6 +74,26 @@ onMounted(()=>{
 </template>
 
 <style scoped>
+.mask{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0,0,0,0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.mask_item{
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-position: center;
+  border-radius: 5px;
+}
 .supportLink{
   width: 100vw;
   box-sizing: border-box;
@@ -93,13 +137,25 @@ onMounted(()=>{
   justify-content: center;
 }
 .icon div{
-  width: 20px;
-  height: 30px;
+  --size: 28px;
+  width: var(--size);
+  height: var(--size);
   margin: 10px;
+  background-color: #e6e6e6;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 7px rgba(0,0,0,0.3);
+  transition: all 500ms;
+}
+.icon div:hover{
+  background-color: #a5cfff;
 }
 .icon div img{
   width: 100%;
-  cursor: pointer;
 }
 .sub_title_after{
   content: '';
