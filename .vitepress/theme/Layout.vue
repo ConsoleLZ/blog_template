@@ -188,7 +188,7 @@ function closeMaskClick(){
   margin: 5px;
   cursor: pointer;
   font-size: 13px;
-  background-color: #e5e5e5;
+  background-color: #d7d7d7;
   border-radius: 5px;
   padding: 5px 8px;
   transition: all 200ms;
@@ -207,16 +207,6 @@ function closeMaskClick(){
 </style>
 
 <style>
-html{
-  font-family: Noto Sans SC,serif;
-  background-color: #e5e3e3;
-}
-a {
-  text-decoration: none;  /* 删除下划线 */
-  color: inherit;  /* 继承父级元素的文本颜色 */
-  font-weight: inherit;  /* 继承父级元素的字体粗细 */
-  font-style: inherit;  /* 继承父级元素的字体样式 */
-}
 .sub{
   margin: 10px auto;
   display: flex;

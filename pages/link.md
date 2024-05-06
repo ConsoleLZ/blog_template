@@ -7,8 +7,10 @@ const links = useConfig().link
 <p style="font-size: 13px">我的好朋友</p>
 <div class="link_box">
     <div class="link_item" v-for="item in links" :key="item.url">
-        <div :style="'background-image: url(' + item.imgSrc + ')'"></div>
-        <p>{{item.name}}</p>
+        <a :href="item.url" target="_blank">
+            <div :style="'background-image: url(' + item.imgSrc + ')'"></div>
+            <p>{{item.name}}</p>
+        </a>
     </div>
 </div>
 
@@ -16,7 +18,11 @@ const links = useConfig().link
 .link_box{
     display: flex;
 }
-.link_item{
+.link_item a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: inherit;
+    font-style: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -3,8 +3,15 @@
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;  /* 删除下划线 */
+  color: inherit;  /* 继承父级元素的文本颜色 */
+  font-weight: inherit;  /* 继承父级元素的字体粗细 */
+  font-style: inherit;  /* 继承父级元素的字体样式 */
+}
 html,body{
   font-family: Noto Sans SC;
+  background-color: white;
 }
 .VPNav{
   display: none;

@@ -1,7 +1,7 @@
 # 博客标题
 title: "博客标题"
 # 首页头像地址
-avatar: "https://bu.dusays.com/2023/12/24/6587c7764111a.webp"
+avatar: "/images/logo.png"
 
 # 社交账号：如果是qq或者微信等，需要给别人一个加你的途径，比如扫描二维码进行添加,codeUrl处填写二维码，srcUrl填写链接地址
 social:
