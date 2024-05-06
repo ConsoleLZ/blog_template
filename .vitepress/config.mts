@@ -5,5 +5,6 @@ export default defineConfig({
     lang: 'zh',
     // base: '/',
     title: "mg",
-    description: "一个博客站点"
+    description: "一个博客站点",
+    outDir: 'dist'
 })
