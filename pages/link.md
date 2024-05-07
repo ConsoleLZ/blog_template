@@ -17,6 +17,7 @@ const links = useConfig().link
 <style scoped>
 .link_box{
     display: flex;
+    flex-wrap: wrap;
 }
 .link_item a{
     text-decoration: none;

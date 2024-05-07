@@ -3,6 +3,7 @@ import {onMounted, ref, onUpdated} from "vue";
 import {useConfig} from "./hooks/useConfig";
 import {useData, useRouter} from "vitepress";
 import Header from './components/Header.vue'
+import ArticleTitle from "./components/ArticleTitle.vue";
 import DefaultTheme from 'vitepress/theme'
 
 const { Layout } = DefaultTheme
@@ -13,7 +14,28 @@ const router = useRouter()
 // 控制遮罩层是否显示
 let isMask = ref(false)
 
+// 是否显示文章标题
+let isShowtitle = ref(false)
+
+let articleTitle = ref('')
+
+onUpdated(()=>{
+  if(location.href.includes('posts')){
+    isShowtitle.value = true
+    articleTitle.value = frontmatter.value.title
+  }else {
+    isShowtitle.value = false
+  }
+})
+
 onMounted(()=>{
+  if(location.href.includes('posts')){
+    isShowtitle.value = true
+    articleTitle.value = frontmatter.value.title
+  }else {
+    isShowtitle.value = false
+  }
+
   if(frontmatter.value.home){
     // 兼容不同文字长度的打字机效果
     let sub_title =<HTMLDivElement>document.getElementsByClassName('sub_title')[0]
@@ -42,6 +64,7 @@ function closeMaskClick(){
 </script>
 
 <template>
+  <ArticleTitle v-if="isShowtitle" :title="articleTitle"></ArticleTitle>
   <Header v-if="!frontmatter.home"></Header>
   <div class="home" v-if="frontmatter.home">
     <!--遮罩层-->

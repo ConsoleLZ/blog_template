@@ -6,5 +6,10 @@ export default defineConfig({
     // base: '/',
     title: "mg",
     description: "一个博客站点",
-    outDir: 'dist'
+    outDir: 'dist',
+    // 生成站点地图
+    sitemap: {
+        hostname: 'http://localhost:5173/'
+    },
+    metaChunk: true
 })
