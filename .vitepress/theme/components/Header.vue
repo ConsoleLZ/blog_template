@@ -51,9 +51,9 @@ function backHome(){
   display: flex;
   font-size: 11px;
   padding: 10px;
-  background-color: #e5e5e5;
-  border-radius: 10px;
+  border-radius: 5px;
   gap: 10px;
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
 }
 
 .navbar li {

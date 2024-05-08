@@ -52,7 +52,6 @@ import {useConfig} from "../.vitepress/theme/hooks/useConfig";
     gap: 30px;
     font-size: 13px;
     align-items: center;
-    margin-bottom: 20px;
 }
 .time_line_item::before{
     content: "";

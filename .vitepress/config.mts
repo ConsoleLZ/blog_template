@@ -4,12 +4,15 @@ export default defineConfig({
     ignoreDeadLinks: true,
     lang: 'zh',
     // base: '/',
-    title: "mg",
+    title: "lazychild",
     description: "一个博客站点",
     outDir: 'dist',
     // 生成站点地图
     sitemap: {
-        hostname: 'http://localhost:5173/'
+        hostname: 'https://asdgjsad.github.io/'
     },
-    metaChunk: true
+    metaChunk: true,
+    head: [
+        ['script', {src: "//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", async: "async"}]
+    ]
 })
