@@ -12,6 +12,7 @@ a {
 html,body{
   font-family: Noto Sans SC;
   background-color: white;
+  scroll-behavior:smooth;
 }
 .VPNav{
   display: none;
