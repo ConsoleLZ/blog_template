@@ -92,7 +92,7 @@ function closeMaskClick() {
     <div class="recommend">
       <div v-for="item in useConfig().article_recommend" :key="item.title">
         <a :href="item.url" style="height: 100%;display: block">
-          <p style="font-size: 15px;margin-bottom: 3px">{{item.title}}</p>
+          <strong>{{item.title}}</strong>
           <div class="introduction">{{item.introduction}}</div>
           <div style="font-size: 12px;display: flex;justify-content: space-between;position: absolute;bottom: 15px;width: 90%;left: 5%">
             <div style="color: #3a5ccc">#{{item.tags}}</div>
@@ -278,6 +278,15 @@ function closeMaskClick() {
   cursor: pointer;
   transition: all 500ms;
   border-radius: 3px;
+}
+.recommend>div strong{
+  display: block;
+  width: 70%;
+  font-size: 15px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .recommend>div:hover{
   transform: scale(1.02);
