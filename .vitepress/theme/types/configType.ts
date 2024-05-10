@@ -34,6 +34,14 @@ interface ExtLinks{
     href:string
 }
 
+interface Article_recommend{
+    title:string
+    introduction:string
+    tags:string
+    date:string
+    url:string
+}
+
 interface ConfigType{
     title:string
     avatar:string
@@ -44,6 +52,7 @@ interface ConfigType{
     about?:Array<About>
     footerText:string
     extLinks:Array<ExtLinks>
+    article_recommend:Array<Article_recommend>
 }
 
 export type {

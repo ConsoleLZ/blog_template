@@ -76,6 +76,14 @@ Valine:
   avatar: ""
   pageSize:
 
+# 首页文章推荐
+article_recommend:
+  - title: "hello world"
+    introduction: "欢迎你使用mg框架，作者: lazychild"
+    tags: "hello"
+    date: "2024-5-03"
+    url: "/posts/hello.html"
+
 # 底部外链接
 extLinks:
   - leftText: "框架"
@@ -92,4 +100,4 @@ extLinks:
     href: "https://valine.js.org/"
 
 # 底部文字
-footerText: "本站使用mg搭建:https://github.com/asdgjsad/blog_template"
+footerText: "本站使用<a style='color:#0984e3' href='https://github.com/asdgjsad/blog_template' target='_blank'>mg</a>搭建"

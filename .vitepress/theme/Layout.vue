@@ -88,6 +88,19 @@ function closeMaskClick() {
         <a :href="item.to">{{ item.name }}</a>
       </li>
     </ul>
+    <!-- 文章推荐   -->
+    <div class="recommend">
+      <div v-for="item in useConfig().article_recommend" :key="item.title">
+        <a :href="item.url" style="height: 100%;display: block">
+          <p style="font-size: 15px;margin-bottom: 3px">{{item.title}}</p>
+          <div class="introduction">{{item.introduction}}</div>
+          <div style="font-size: 12px;display: flex;justify-content: space-between;position: absolute;bottom: 15px;width: 90%;left: 5%">
+            <div style="color: #3a5ccc">#{{item.tags}}</div>
+            <div style="color: gray">{{item.date}}</div>
+          </div>
+        </a>
+      </div>
+    </div>
     <div class="statistics">
       <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
       <span id="busuanzi_container_site_uv">
@@ -98,7 +111,7 @@ function closeMaskClick() {
       <a target="_blank" v-for="item in useConfig().extLinks" :key="item.href" :href="item.href"><img
           :src="'https://img.shields.io/badge/' + item.leftText + '-' + item.rightText + '-white' + '?color=' + item.bgColor"></a>
     </div>
-    <div class="footer">{{ useConfig().footerText }}</div>
+    <div class="footer" v-html="useConfig().footerText"></div>
   </div>
   <Layout v-else></Layout>
 </template>
@@ -127,19 +140,15 @@ function closeMaskClick() {
 }
 
 .supportLink {
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
-  position: absolute;
-  bottom: 40px;
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
 .home {
-  height: 100vh;
   padding-top: 30px;
-  overflow: hidden;
   box-sizing: border-box;
 }
 
@@ -223,7 +232,8 @@ function closeMaskClick() {
 }
 
 .navbar {
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
 }
@@ -244,12 +254,61 @@ function closeMaskClick() {
 }
 
 .footer {
-  width: 100vw;
-  position: absolute;
-  left: 0;
-  bottom: 10px;
+  width: 100%;
   text-align: center;
   font-size: 14px;
+  margin: 10px 0;
+}
+.recommend{
+  width: 90%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 80px auto;
+  margin-top: 20px !important;
+  flex-wrap: wrap;
+}
+.recommend>div{
+  width: 23%;
+  height: 28vh;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  transition: all 500ms;
+  border-radius: 3px;
+}
+.recommend>div:hover{
+  transform: scale(1.02);
+}
+@media screen and (max-width: 780px) {
+  .recommend>div{
+    width: 40%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .recommend>div{
+    width: 90%;
+  }
+}
+.statistics{
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.statistics>span{
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.introduction{
+  font-size: 13px;
+  overflow: hidden;
+  display: -webkit-box; /* 将对象作为弹性伸缩盒子模型显示 */
+  -webkit-line-clamp: 4; /* 行数，值可以改，表示展示X行后多余的缩略展示 */
+  -webkit-box-orient: vertical; /* 设置或检索伸缩盒对象的子元素的排列方式 */
 }
 </style>
 
@@ -283,17 +342,5 @@ function closeMaskClick() {
   100% {
     width: 0;
   }
-}
-.statistics{
-  display: flex;
-  flex-direction: column;
-  font-size: 12px;
-  position: absolute;
-  bottom: 70px;
-}
-.statistics>span{
-  width: 100vw;
-  display: block;
-  text-align: center;
 }
 </style>
