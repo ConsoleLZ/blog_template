@@ -13,6 +13,7 @@ export default defineConfig({
     },
     metaChunk: true,
     head: [
-        ['script', {src: "//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", async: "async"}]
+        ['script', {src: "//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", async: "async"}],
+        ['meta',{name: "author", content: "刘哲"}]
     ]
 })
