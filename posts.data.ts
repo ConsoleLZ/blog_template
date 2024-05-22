@@ -5,7 +5,12 @@ import YAML from 'yaml'
 
 // 抽取文章标题，日期，标签
 function extraction(txt:string){
-    return YAML.parse(txt)
+    try {
+        return YAML.parse(txt)
+    }catch {
+        console.log('无法解析yaml数据',`数据源:${txt}`)
+        return
+    }
 }
 // 日期排序
 function formatDateString(dateStr:any) {
@@ -26,16 +31,21 @@ function readDirectory(dir) {
     try {
         const files = fs.readdirSync(dir);
         files.forEach(file => {
-            let txt = fs.readFileSync(`./posts/${file}`)
-            let txtObj = extraction(txt.toString().split('---')[1])
-            arr.push({
-                src: file,
-                ...txtObj
-            })
+            // 排除.git目录
+            if(file != '.git'){
+                let txt = fs.readFileSync(`./posts/${file}`)
+                if(txt.toString().split('---')[1]){
+                    let txtObj = extraction(txt.toString().split('---')[1])
+                    arr.push({
+                        src: file,
+                        ...txtObj
+                    })
+                }
+            }
         });
 
     } catch (err) {
-        console.log(err);
+        console.log("发生错误");
     }
     return sortDateStringArray(arr)
 }

@@ -74,3 +74,6 @@ html,body{
   border-radius:10px;
   background-color: #777575;
 }
+.VPContent img{
+  width: 60% !important;
+}
