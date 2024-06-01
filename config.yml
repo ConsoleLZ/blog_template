@@ -1,5 +1,7 @@
 # 博客标题
 title: "博客标题"
+# 副标题
+sub_title: "让我找到工作吧，求求了"
 # 首页头像地址
 avatar: "/images/logo.png"
 
@@ -42,6 +44,15 @@ link:
   - name: "lazychild"
     url: "https://www.lazychild.fun/"
     imgSrc: "https://img2.woyaogexing.com/2024/05/02/5436aa7a7561ca10!400x400.png"
+
+# 底部个人信息
+footer_info:
+  - title: "站长"
+    info: "刘哲"
+  - title: "联系方式"
+    info: "17347187569"
+  - title: "邮箱"
+    info: "17347187569@163.com"
 
 # 网站时间线，会在关于页面进行显示
 timeLine:
@@ -98,6 +109,3 @@ extLinks:
     rightText: "valine"
     bgColor: "54a0ff"
     href: "https://valine.js.org/"
-
-# 底部文字
-footerText: "本站使用<a style='color:#0984e3' href='https://github.com/asdgjsad/blog_template' target='_blank'>mg</a>搭建"

@@ -5,7 +5,7 @@
 1. posts目录下面可以放你的markdown文章，注意这里面除了能放git目录，暂不支持存放其他目录，否则会报错
 
 ## 预览
-![](https://pic.imgdb.cn/item/664deb01d9c307b7e91236a0.png)
+![预览图](https://pic.imgdb.cn/item/665b22ecd9c307b7e9481fdd.png)
 
 ## 安装依赖
 ```shell

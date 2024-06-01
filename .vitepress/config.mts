@@ -14,6 +14,9 @@ export default defineConfig({
     metaChunk: true,
     head: [
         ['script', {src: "//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", async: "async"}],
-        ['meta',{name: "author", content: "刘哲"}]
+        ['meta',{name: "author", content: "刘哲"}],
+        ['script', {src: "/js/particles/particles.js"}],
+        ['script', {src: "/js/particles/app.js"}],
+        ['link', {rel: 'stylesheet', media: "screen", href: "/css/particles.css"}]
     ]
 })

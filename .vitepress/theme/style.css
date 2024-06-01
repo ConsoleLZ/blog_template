@@ -46,14 +46,20 @@ html,body{
 .content{
   padding: 0 !important;
 }
+.menu-text{
+  color: white !important;
+}
 .VPLocalNav{
   top: 0 !important;
+  background-color: transparent !important;
 }
 .items{
   left: 0 !important;
 }
 .Layout{
   min-height: 40vh !important;
+  position: relative;
+  z-index: 99;
 }
 ::-webkit-scrollbar{
   width:8px;
@@ -76,4 +82,23 @@ html,body{
 }
 .VPContent img{
   width: 60% !important;
+}
+.language-shell{
+  background-color: transparent !important;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2) !important;
+}
+.vp-doc h2{
+  border: none !important;
+}
+.outline{
+  background-color: black !important;
+}
+.outline-link{
+  color: white !important;
+}
+.header{
+  background-color: black !important;
+}
+.top-link{
+  color: #848484 !important;
 }

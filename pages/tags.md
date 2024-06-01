@@ -38,12 +38,12 @@ for(let item of Object.entries(obj)){
     width: fit-content;
     font-size: 12px;
     border-radius: 5px;
-    padding: 2px 5px;
-    background-color: #ebebeb;
+    padding: 8px 14px;
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.6);
     cursor: pointer;
 }
 a{
     text-decoration:none;
-    color: black;
+    color: white;
 }
 </style>

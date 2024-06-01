@@ -42,17 +42,23 @@ interface Article_recommend{
     url:string
 }
 
+interface Footer_info{
+    title:string
+    info:string
+}
+
 interface ConfigType{
     title:string
+    sub_title:string
     avatar:string
     social?:Array<Social>
     pages:Array<Pages>
     link:Array<Link>
     timeLine?:Array<TimeLine>
     about?:Array<About>
-    footerText:string
     extLinks:Array<ExtLinks>
     article_recommend:Array<Article_recommend>
+    footer_info:Array<Footer_info>
 }
 
 export type {

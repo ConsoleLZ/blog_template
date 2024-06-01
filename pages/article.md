@@ -25,6 +25,10 @@ if(!url){
 </ul>
 
 <style scoped>
+.articleList{
+    position: relative;
+    z-index: 99;
+}
 .articleList li a{
     width: fit-content;
     display: flex;
@@ -50,5 +54,6 @@ if(!url){
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    color: white;
 }
 </style>

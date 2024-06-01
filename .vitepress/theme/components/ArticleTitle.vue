@@ -9,10 +9,10 @@ onMounted(()=>{
   window.onscroll = ()=>{
     if(document.documentElement.scrollTop > 67){
       ti.style.position = "sticky"
-      ti.style.top = "13px"
+      ti.style.top = "12px"
     }else {
       ti.style.position = "absolute"
-      ti.style.top = "87px"
+      ti.style.top = "78px"
     }
   }
 })
@@ -30,10 +30,13 @@ strong{
   letter-spacing: 2px;
   position: absolute;
   left: 115px;
-  top: 87px;
-  color: #656565;
-  z-index: 21;
-  font-size: 15px;
+  top: 78px;
+  color: white;
+  z-index: 100;
+  font-size: 12px;
+  padding: 5px 10px;
+  background-color: rgb(120, 120, 120);
+  border-radius: 5px;
 }
 @media screen and (min-width: 960px){
 strong{

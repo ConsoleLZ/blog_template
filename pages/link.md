@@ -18,6 +18,8 @@ const links = useConfig().link
 .link_box{
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 99;
 }
 .link_item a{
     text-decoration: none;
@@ -39,7 +41,7 @@ const links = useConfig().link
     border-radius: var(--size);
     background-size: contain;
     background-position: center;
-    box-shadow: 0 0 7px rgba(0,0,0,0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     transition: all 300ms;
 }
 .link_item p{

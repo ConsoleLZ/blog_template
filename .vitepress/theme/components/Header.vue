@@ -23,6 +23,9 @@ function backHome(){
   margin-bottom: 10px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 99;
+  background-color: transparent !important;
 }
 
 .avatar {
@@ -58,7 +61,7 @@ function backHome(){
 
 .navbar li {
   list-style: none;
-  background-image: linear-gradient(to right, #31ef08 0 100%, rgba(0, 0, 0, 0) 0% 100%);
+  background-image: linear-gradient(to right, white 0 100%, rgba(0, 0, 0, 0) 0% 100%);
   background-size: 0 15%;
   background-position: left bottom;
   background-repeat: no-repeat;
