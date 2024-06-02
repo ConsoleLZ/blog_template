@@ -28,7 +28,7 @@ onUpdated(() => {
   }
 })
 
-onMounted(() => {
+onMounted(() => {  
   if (location.href.includes('posts')) {
     isShowtitle.value = true
     articleTitle.value = frontmatter.value.title
@@ -45,7 +45,6 @@ onMounted(() => {
     sub_title.style.cssText = `animation: typewriter ${Math.ceil(sub_title.innerText.length / 3)}s steps(${sub_title.innerText.length + 30}) infinite;`
   }
 })
-
 // 打开遮罩层
 function friendClick(codeUrl, srcUrl) {
   if (codeUrl) {
@@ -289,7 +288,7 @@ function closeMaskClick() {
   border-radius: 5px;
   padding: 8px 14px;
   transition: all 500ms;
-  box-shadow: 0 0 7px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
 }
 
 .navbar li:hover {
@@ -328,7 +327,7 @@ footer {
   cursor: pointer;
   transition: all 500ms;
   border-radius: 10px;
-  border: 1px solid white;
+  border: 1px solid #2b2b2b;
 }
 
 .recommend>div strong {

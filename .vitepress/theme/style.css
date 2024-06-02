@@ -83,12 +83,14 @@ html,body{
 .VPContent img{
   width: 60% !important;
 }
-.language-shell{
-  background-color: transparent !important;
-  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2) !important;
+.vp-adaptive-theme,.vp-code-group {
+  background-color: #fffffff2 !important;
 }
 .vp-doc h2{
   border: none !important;
+}
+.vp-doc p{
+  font-size: 14px;
 }
 .outline{
   background-color: black !important;
@@ -101,4 +103,10 @@ html,body{
 }
 .top-link{
   color: #848484 !important;
+}
+.VPLocalNavOutlineDropdown button{
+  padding: 3px 6px;
+  background-color: #566fc3;
+  border-radius: 5px;
+  margin-right: 10px;
 }

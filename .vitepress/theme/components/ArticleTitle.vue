@@ -9,7 +9,7 @@ onMounted(()=>{
   window.onscroll = ()=>{
     if(document.documentElement.scrollTop > 67){
       ti.style.position = "sticky"
-      ti.style.top = "12px"
+      ti.style.top = "15px"
     }else {
       ti.style.position = "absolute"
       ti.style.top = "78px"
@@ -29,18 +29,18 @@ onMounted(()=>{
 strong{
   letter-spacing: 2px;
   position: absolute;
-  left: 115px;
-  top: 78px;
+  left: 135px;
+  top: 80px;
   color: white;
   z-index: 100;
-  font-size: 12px;
+  font-size: 14px;
   padding: 5px 10px;
-  background-color: rgb(120, 120, 120);
+  background-color: rgb(58 129 77);
   border-radius: 5px;
 }
 @media screen and (min-width: 960px){
 strong{
-  left: 140px;
+  left: 170px;
 }
 }
 </style>

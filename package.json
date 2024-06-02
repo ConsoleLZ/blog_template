@@ -1,6 +1,6 @@
 {
   "name": "mg",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "一个博客网站模板",
   "keywords": ["vitepress", "blog", "html", "css", "js", "static", "SSG"],
   "devDependencies": {
