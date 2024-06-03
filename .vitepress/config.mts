@@ -15,8 +15,6 @@ export default defineConfig({
     head: [
         ['script', {src: "//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", async: "async"}],
         ['meta',{name: "author", content: "刘哲"}],
-        ['script', {src: "/js/particles/particles.js"}],
-        ['script', {src: "/js/particles/app.js", async: 'async'}],
         ['link', {rel: 'stylesheet', media: "screen", href: "/css/particles.css"}]
     ],
     // 图片懒加载

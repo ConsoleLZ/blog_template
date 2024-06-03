@@ -29,6 +29,17 @@ onUpdated(() => {
 })
 
 onMounted(() => {  
+  // 增加粒子背景依赖脚本
+  const spt1 = document.createElement('script')
+  const spt2 = document.createElement('script')
+  spt1.src = '/js/particles/app.js'
+  spt2.src = '/js/particles/particles.js'
+  spt1.defer = true
+  spt2.defer = true
+  document.querySelector('head')?.appendChild(spt2)
+  setTimeout(()=>{
+    document.querySelector('head')?.appendChild(spt1)
+  }, 500)
   if (location.href.includes('posts')) {
     isShowtitle.value = true
     articleTitle.value = frontmatter.value.title
