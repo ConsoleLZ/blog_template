@@ -128,3 +128,11 @@ html,body{
 #vcomments{
   margin-top: 50px;
 }
+.vcard .vimg{
+  --size: 45px;
+  width: var(--size) !important;
+  height: var(--size) !important;
+}
+.vcontent p{
+  color: white !important;
+}
