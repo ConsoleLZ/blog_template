@@ -16,17 +16,6 @@ interface Link{
     imgSrc:string
 }
 
-interface TimeLine{
-    title:string
-    time:string
-    description:string
-}
-
-interface About{
-    title:string
-    content:string
-}
-
 interface ExtLinks{
     leftText:string
     rightText:string
@@ -54,8 +43,6 @@ interface ConfigType{
     social?:Array<Social>
     pages:Array<Pages>
     link:Array<Link>
-    timeLine?:Array<TimeLine>
-    about?:Array<About>
     extLinks:Array<ExtLinks>
     article_recommend:Array<Article_recommend>
     footer_info:Array<Footer_info>

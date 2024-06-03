@@ -110,3 +110,21 @@ html,body{
   border-radius: 5px;
   margin-right: 10px;
 }
+.vwrap{
+  border: 1px solid #3b3939 !important;
+}
+.vnick.vinput,.vmail.vinput,.vlink.vinput{
+  border-bottom: 1px dashed #636363 !important;
+}
+::-webkit-input-placeholder{
+  color: rgb(150, 150, 150) !important;
+}
+.vheader.item3 input{
+  color: white !important;
+}
+.veditor{
+  color: white !important;
+}
+#vcomments{
+  margin-top: 50px;
+}

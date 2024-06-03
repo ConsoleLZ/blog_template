@@ -18,5 +18,11 @@ export default defineConfig({
         ['script', {src: "/js/particles/particles.js"}],
         ['script', {src: "/js/particles/app.js"}],
         ['link', {rel: 'stylesheet', media: "screen", href: "/css/particles.css"}]
-    ]
+    ],
+    // 图片懒加载
+    markdown: {
+        image: {
+            lazyLoading: true
+        }
+    }
 })

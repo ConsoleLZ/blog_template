@@ -54,31 +54,6 @@ footer_info:
   - title: "邮箱"
     info: "17347187569@163.com"
 
-# 网站时间线，会在关于页面进行显示
-timeLine:
-  - title: "开始搭建hexo博客"
-    time: "2023-3"
-    description: "发现有一些已经开源的主题模板，用的是butterfly的主题，不错，好看"
-  - title: "部署到了Gitee上面"
-    time: "2023-4"
-    description: "哈哈哈哈，终于拥有属于自己的博客网站了"
-  - title: "拥有自己的网站域名"
-    time: "2023-6"
-    description: "看别人都有自己的网站域名，很想自己部署一个自己的域名，但是好像Gitee只能使用自带的，于是部署到了vercel上面，还免了备案，嘻嘻"
-  - title: "优化网站"
-    time: "2023-12"
-    description: "现在网站面临着一个资源过多（图片有点多），访问过慢，所以打算打造一个极简分格的博客，于是使用了stellar主题，删去了文章的封面图片,以及其他的一些优化"
-  - title: "自己搭建博客模板"
-    time: "2024-4"
-    description: "虽然现在的网站访问时间确实快了不少，但是一个好的程序员怎么能不搭建出属于自己的博客呢，vitepress非常好"
-
-# 个人介绍，以一个标题加内容的形式在关于页面进行展示
-about:
-  - title: "个人爱好"
-    content: "唱，跳，rap，篮球"
-  - title: "技术栈"
-    content: "html,css,js"
-
 # 关于留言功能：目前只支持Valine, 需要到https://www.leancloud.cn/创建一个账号，创建完后，直接去控制台创建一个应用，去设置里面找到应用凭证即可
 Valine:
   appId: ""
