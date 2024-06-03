@@ -136,3 +136,6 @@ html,body{
 .vcontent p{
   color: white !important;
 }
+.vp-doc blockquote > p {
+  color: #e38989 !important;
+}
