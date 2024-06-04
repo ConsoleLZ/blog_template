@@ -139,3 +139,7 @@ html,body{
 .vp-doc blockquote > p {
   color: #e38989 !important;
 }
+.vp-doc :not(pre) > code{
+  color: black;
+  background-color: #aee3a0;
+}
